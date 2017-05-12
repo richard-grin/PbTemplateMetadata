@@ -5,5 +5,6 @@ To start with NetBeans:
   - create a database "testquestions" with Java DB, user "toto", password "toto"
   - start the project; the data will be created automatically in the database
   
-To reproduce the problem, select a question and click on Modify. You will get a NullPointerException at the submit of the form.
+To reproduce the problem, select a question and click on Modify. You will get a PropertyNotFoundException at the submit of the form.
 In the log of the server, is written "this" for the session scoped backing bean; it is also written in the page which modify a question. A phase listener is used to see the different phases of the JSF life cycle.
+If you click "Modify without template", the page which modify the question has no template and it works, no exception.
